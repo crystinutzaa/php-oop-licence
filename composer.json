@@ -1,0 +1,21 @@
+{
+    "name": "cristina/licencesystem",
+    "description": "OOP Licence System",
+    "type": "project",
+    "license": "",
+    "authors": [
+        {
+            "name": "Soponar Cristina",
+            "email": "crystinutzaa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "app\\": "\\"
+        }
+    },
+    "require-dev": {
+        "codeception/codeception": "^2.4"
+    }
+}
