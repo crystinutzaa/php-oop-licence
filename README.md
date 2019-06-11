@@ -15,11 +15,15 @@ Database script: https://github.com/crystinutzaa/php-oop-licence/blob/master/con
 
 Create database "license" and import the MySql schema
 
-mysql -p -u[user] license < license.sql
+mysql -u [user] -p [password] license < licence.sql
+
+
+### Configure DB connection
+Go to: /config/config.php and change the DB username, password & dsn
 
 
 ### Run
-http://localhost/
+http://localhost/php-oop-licence
 
 
 ### Test - Codeception
@@ -27,6 +31,9 @@ http://localhost/
 Acceptance Tests, Functional Tests and Unit Tests
 
 $ ./vendor/bin/codecept run --steps
+
+Acceptance tests: Edit the file tests/acceptance.suite.yml and change the URL to
+http://localhost/php-oop-licence
 
 
 ### Author

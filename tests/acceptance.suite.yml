@@ -8,5 +8,5 @@ actor: AcceptanceTester
 modules:
     enabled:
         - PhpBrowser:
-            url: http://localhost/LicensingSystem
+            url: http://localhost/php-oop-licence
         - \Helper\Acceptance
