@@ -1,7 +1,9 @@
-# PHP OOP License - Case study
+<<<<<<< HEAD
+# PHP OOP License Application - Case study
 The intention of this project was to highlight Oriented Object Programming concepts in PHP
 
 In this case study you will see how to prevent SQL Injection & CSFR attack
+
 
 
 ### Installation
@@ -29,3 +31,4 @@ $ ./vendor/bin/codecept run --steps
 
 ### Author
 Soponar Cristina - <crystinutzaa@gmail.com> 
+
