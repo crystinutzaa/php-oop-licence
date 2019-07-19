@@ -7,7 +7,6 @@ use app\components\core\Controller as CoreController;
 use app\components\core\Router as BaseRouter;
 use app\components\Router;
 
-
 /**
  * Backbone class application - uses Core Singleton Application to control the application instances
  * Application class handles all requests and responsed for the whole app
@@ -15,7 +14,6 @@ use app\components\Router;
  */
 class Application extends CoreApplication
 {
-
     public $name = '';
     public $router;
     public $controller;
@@ -25,7 +23,6 @@ class Application extends CoreApplication
      */
     public function run()
     {
-
         $this->load();
 
         $this->init();
@@ -51,7 +48,6 @@ class Application extends CoreApplication
         // Init all components
         if (is_array($this->_config['components'])) {
             foreach ($this->_config['components'] as $name => $component) {
-
                 $className = $component['class'];
                 if (!isset($className)) {
                     throw new \Exception("The class in componet {$name} must to be passed");

@@ -3,12 +3,11 @@
 namespace app\components\commons;
 
 /**
- * CsrfSecurity Class 
+ * CsrfSecurity Class
  * @author Soponar Cristina <crystinutzaa@gmail.com>
  */
 class Validator
 {
-
     public static function isRequired($value)
     {
         if (!isset($value) || trim($value) == '') {

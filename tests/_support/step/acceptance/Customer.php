@@ -4,7 +4,6 @@ namespace step\acceptance;
 
 class Customer extends \AcceptanceTester
 {
-
     public function loginAsCustomer()
     {
         $I = $this;

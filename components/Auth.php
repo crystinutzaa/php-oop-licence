@@ -14,7 +14,6 @@ use app\components\commons\Validator;
  */
 class Auth extends BaseAuth
 {
-
     public static function init()
     {
         return new Auth();
@@ -57,7 +56,7 @@ class Auth extends BaseAuth
     }
 
     /**
-     * Login the user based on login and password parameters 
+     * Login the user based on login and password parameters
      * @return boolean
      */
     public function login()
@@ -81,7 +80,7 @@ class Auth extends BaseAuth
     }
 
     /**
-     * Create customer account 
+     * Create customer account
      * @return boolean
      */
     public function createAccount()

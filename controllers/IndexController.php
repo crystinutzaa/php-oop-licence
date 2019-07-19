@@ -10,16 +10,15 @@ use app\components\commons\CsrfSecurity;
 
 class IndexController extends BaseController
 {
-
     public function actionIndex()
     {
         $licenses = (new Licence)->getAll();
 
         $isLogged = (new Auth)->isLogged();
-        $displayName = NULL;
+        $displayName = null;
 
-        $idLicense = NULL;
-        $expiredLicense = NULL;
+        $idLicense = null;
+        $expiredLicense = null;
         if (isset($_GET['expiredLicense'])) {
             $expiredLicense = $_GET['expiredLicense'];
         }
@@ -32,7 +31,8 @@ class IndexController extends BaseController
             $expirationDate = $customer->license_expiration;
         }
         $this->renderView(
-            'views/index/index', [
+            'views/index/index',
+            [
             'licenses' => $licenses,
             'isLogged' => $isLogged,
             'displayName' => $displayName,
@@ -75,7 +75,6 @@ class IndexController extends BaseController
 
     public function actionLogout()
     {
-
         Auth::logout();
         // Redirect to index page
         $this->redirectToRoute('index', 'index');

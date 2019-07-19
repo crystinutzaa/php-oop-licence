@@ -2,15 +2,12 @@
 
 class CartCest
 {
-
     public function _before(AcceptanceTester $I)
     {
-        
     }
 
     public function _after(AcceptanceTester $I)
     {
-        
     }
 
     public function testBuyLicences(\step\acceptance\Customer $I)

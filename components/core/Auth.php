@@ -13,7 +13,7 @@ abstract class Auth extends Core
 
     /**
      * Errors array
-     * @var type 
+     * @var type
      */
     protected $errors = [];
 

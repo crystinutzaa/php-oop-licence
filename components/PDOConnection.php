@@ -6,7 +6,7 @@ use app\components\core\ConnectionInterface;
 
 /**
  *  class for manipulate Mysql connection
- * 
+ *
  * @author crystinutzaa@gmail.com
  */
 class PDOConnection implements ConnectionInterface

@@ -8,11 +8,14 @@ use app\components\Application;
 /**
  * Customer Class which extends the ObjectModelCore
  * @author Soponar Cristina <crystinutzaa@gmail.com>
+ *
  */
+
 class Licence extends ObjectModelCore
 {
-    /* Init the Licence Object with ObjectModelFactory */
-
+    /**
+     * Init the Licence Object with ObjectModelFactory
+     */
     public function init()
     {
         return new Licence();
@@ -84,6 +87,5 @@ class Licence extends ObjectModelCore
      */
     public function save()
     {
-        
     }
 }

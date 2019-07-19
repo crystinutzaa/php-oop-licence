@@ -10,7 +10,6 @@ use app\components\commons\CsrfSecurity;
 
 class CartController extends BaseController
 {
-
     public function actionBuy()
     {
         // Redirect to index ,login if the user is not logged in
@@ -39,26 +38,27 @@ class CartController extends BaseController
             }
             // Compare which expiration date is greater
             if (isset($continousExpirationDate) && $continousExpirationDate > $expirationDate) {
-                $expirationDate = $continousExpirationDate;                
+                $expirationDate = $continousExpirationDate;
             }
             if (isset($_POST['order']) && $_POST['order'] && CsrfSecurity::checkCsrfToken($_POST['csrf_token'])) {
                 $idLicense = $_POST['order']['idLicense'];
                 // load new customer license data
                 $customer->loadData(
-                        [
+                    [
                             'id_license' => $idLicense,
                             'license_expiration' => $expirationDate
                         ]
                     );
                 // save customer license
                 $customer->save();
-                // redirect to My Account 
+                // redirect to My Account
                 $this->redirectToRoute('account', 'view');
             }
         }
 
         $this->renderView(
-            'views/cart/buy', [
+            'views/cart/buy',
+            [
             'isLogged' => $isLogged,
             'displayName' => $displayName,
             'license' => $license,

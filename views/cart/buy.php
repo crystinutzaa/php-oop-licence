@@ -1,7 +1,7 @@
-<?php 
+<?php
 use app\components\commons\CsrfSecurity;
 
-$this->renderView('views/layout/header', []); 
+$this->renderView('views/layout/header', []);
 ?>
 <?php
 $license = $params['license'];
@@ -25,7 +25,6 @@ $displayName = $params['displayName'];
 
 <?php
 if (isset($license)) {
-
     ?>
     <div class = "card-deck mb-3 text-center">
         <div class="card mb-4 shadow-sm">
@@ -50,15 +49,14 @@ if (isset($license)) {
     </div>
     <?php
 } else {
-
-    ?>
+        ?>
     <div class="alert alert-info" role="alert">No license available yet</div> 
 
     <div class="clear">
         <a class="btn btn-outline-primary" href="./index.php?controller=index&action=index">Select a license</a>
     </div>
     <?php
-}
+    }
 
 ?>
 

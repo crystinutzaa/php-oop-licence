@@ -3,18 +3,17 @@
 namespace app\components\commons;
 
 /**
- * CsrfSecurity Class 
+ * CsrfSecurity Class
  * @author Soponar Cristina <crystinutzaa@gmail.com>
  */
 class CsrfSecurity
 {
-
-    static function setCsrfSession($csrfToken)
+    public static function setCsrfSession($csrfToken)
     {
         $_SESSION['csrfToken'] = $csrfToken;
     }
 
-    static function getCsrfSession()
+    public static function getCsrfSession()
     {
         return $_SESSION['csrfToken'];
     }
@@ -23,7 +22,7 @@ class CsrfSecurity
      * Generate Token on every request
      * @return type
      */
-    static function generateCsrfToken()
+    public static function generateCsrfToken()
     {
         if (!session_id()) {
             session_start();
@@ -36,9 +35,9 @@ class CsrfSecurity
 
     /**
      * check CSRF token
-     * 
+     *
      */
-    static function checkCsrfToken($token)
+    public static function checkCsrfToken($token)
     {
         return $token === self::getCsrfSession();
     }

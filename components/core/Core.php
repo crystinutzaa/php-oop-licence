@@ -6,10 +6,8 @@ namespace app\components\core;
  * Class which allows to insert class data dynamically
  * @author Soponar Cristina <crystinutzaa@gmail.com>
  */
-abstract class Core 
+abstract class Core
 {
-   
-
     private $data = [];
 
     public function loadData($attributes = [])
@@ -60,7 +58,7 @@ abstract class Core
     }
 
     /**
-     * Unset model attribute 
+     * Unset model attribute
      * @param type $name
      */
     public function __unset($name)
