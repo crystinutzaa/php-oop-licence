@@ -15,15 +15,15 @@ $expiredLicense = $params['expiredLicense'];
   
 <?php
 if ($isLogged) {
-
     ?>
     <a class="btn btn-outline-primary" href="./index.php?controller=account&action=view">Hi <?php echo $displayName; ?> </a>
     <a id="logout" class="btn btn-outline-primary" href="./index.php?controller=index&action=logout">Logout</a>
-    <?php } else {
-
-    ?>
+    <?php
+} else {
+        ?>
     <a class="btn btn-outline-primary" href="./index.php?controller=index&action=login">Login</a>
-    <?php }
+    <?php
+    }
 
     ?>
 </div>
@@ -31,7 +31,6 @@ if ($isLogged) {
         <?php
         if (is_array($licenses) && count($licenses) > 0) {
             foreach ($licenses as $license) {
-
                 ?>
                 <div class="card mb-4 shadow-sm">
                     <div class="card-header">
@@ -42,40 +41,39 @@ if ($isLogged) {
                         <ul class="list-unstyled mt-3 mb-4">
                             <li><?php echo $license->allowed_websites ?> allowed websites</li>
                         </ul>
-                        <?php 
+                        <?php
                             if (isset($idLicense) && $idLicense == $license->id) {
-                        ?>
+                                ?>
                             <?php
-                                if (isset($expiredLicense) && $expiredLicense)  {
-                            ?>
+                                if (isset($expiredLicense) && $expiredLicense) {
+                                    ?>
                                     <a class="buy-license btn btn-lg btn-block btn-primary" href="./index.php?controller=cart&action=buy&id=<?php echo $license->id ?>">Continue with Current Plan</a>
-                            <?php } else {
-                            ?>
+                            <?php
+                                } else {
+                                    ?>
                                 <a class="btn btn-lg btn-block btn-primary" href="#">Current Plan</a>
                             <?php
-                            } ?>
-                        <?php 
-                            } else if (!isset($idLicense)) {
-                       ?>
+                                } ?>
+                        <?php
+                            } elseif (!isset($idLicense)) {
+                                ?>
                                 <a class="buy-license btn btn-lg btn-block btn-outline-primary" href="./index.php?controller=cart&action=buy&id=<?php echo $license->id ?>">Buy</a>
-                         <?php 
+                         <?php
                             } else {
-                          ?>    
+                                ?>    
                                 <a class="buy-license btn btn-lg btn-block btn-outline-primary" href="./index.php?controller=cart&action=buy&id=<?php echo $license->id ?>">Upgrade</a>
-                                <?php 
-                            }
-                        ?>
+                                <?php
+                            } ?>
                         
                     </div>
                 </div>
                 <?php
             }
         } else {
-
             ?>
             <div class="alert alert-info" role="alert">No license available yet</div> 
         <?php
-    }
+        }
 
     ?>
     </div>

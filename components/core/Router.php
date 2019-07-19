@@ -11,13 +11,13 @@ abstract class Router
 
     /**
      * Current controller which will be used based on the current route
-     * @var type 
+     * @var type
      */
     private $controllerName;
 
     /**
      * Name of action class that will be called further
-     * @var type 
+     * @var type
      */
     private $actionName;
 
@@ -28,7 +28,6 @@ abstract class Router
      */
     public function __construct($app)
     {
-
         if (isset($_GET['controller'])) {
             $controllerName = $_GET['controller'];
         }
@@ -36,7 +35,7 @@ abstract class Router
             $actionName = $_GET['action'];
         }
         if (!isset($controllerName)) {
-            // If no controller then get the default controller and action: index controller & index action            
+            // If no controller then get the default controller and action: index controller & index action
             $controllerName = $app->getConfig('defaultController');
             $actionName = $app->getConfig('defaultAction');
         }

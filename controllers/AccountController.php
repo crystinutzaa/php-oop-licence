@@ -11,7 +11,6 @@ use app\components\commons\CsrfSecurity;
 
 class AccountController extends BaseController
 {
-
     public function actionView()
     {
         // Redirect to index ,login if the user is not logged in
@@ -26,13 +25,13 @@ class AccountController extends BaseController
         $websites = (new Website)->getByIdCustomer($idCustomer);
         $customer = (new Customer)->getById($idCustomer);
 
-        $idLicense = NULL;
-        $expirationDate = NULL;
+        $idLicense = null;
+        $expirationDate = null;
 
         $idLicense = $customer->id_license;
         $expirationDate = $customer->license_expiration;
 
-        $license = NULL;
+        $license = null;
 
         $licenseIsExpired = false;
         if (isset($idLicense)) {
@@ -70,7 +69,8 @@ class AccountController extends BaseController
             }
         }
         $this->renderView(
-            'views/account/view', [
+            'views/account/view',
+            [
             'websites' => $websites,
             'isLogged' => $isLogged,
             'displayName' => $displayName,

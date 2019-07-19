@@ -117,7 +117,6 @@ class Website extends ObjectModelCore
     public function save()
     {
         if ($this->validate()) {
-
             if (!$this->id_website) {
                 $conn = Application::app()->db->conn;
                 $sql = " INSERT INTO website "
@@ -133,7 +132,6 @@ class Website extends ObjectModelCore
                 ]);
                 $this->id_website = $conn->lastInsertId();
             } else {
-
                 $conn = Application::app()->db->conn;
                 $sql = " UPDATE website SET "
                     . " url=? "

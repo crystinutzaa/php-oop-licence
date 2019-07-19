@@ -2,20 +2,16 @@
 
 class IndexCest
 {
-
     public function _before(AcceptanceTester $I)
     {
-        
     }
 
     public function _after(AcceptanceTester $I)
     {
-        
     }
 
     public function testEnterPage(AcceptanceTester $I)
     {
-
         $I->amOnPage('/index.php?controller=index&action=index');
         $I->see('License 1');
         $I->see('License 2');
@@ -24,7 +20,6 @@ class IndexCest
 
     public function testLoginOk(AcceptanceTester $I)
     {
-
         $I->amOnPage('/index.php?controller=index&action=login');
         // Test Create account OK
         $I->fillField('login[email]', 'test@test.com');
@@ -109,7 +104,6 @@ class IndexCest
 
     public function testLogout(AcceptanceTester $I)
     {
-
         $I->amOnPage('/index.php?controller=index&action=login');
         // Test submit
         $I->fillField('login[email]', 'test@test.com');

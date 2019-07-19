@@ -10,7 +10,6 @@ use app\components\core\Router as CoreRouter;
  */
 class Router extends CoreRouter
 {
-
     public function __construct($app)
     {
         parent::__construct($app);

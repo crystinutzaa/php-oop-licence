@@ -123,7 +123,6 @@ class Customer extends ObjectModelCore
     public function save()
     {
         if ($this->validate()) {
-
             if (!$this->id_customer) {
                 $conn = Application::app()->db->conn;
                 $sql = " INSERT INTO customer "
@@ -140,7 +139,6 @@ class Customer extends ObjectModelCore
                 ]);
                 $this->id_customer = $conn->lastInsertId();
             } else {
-
                 $conn = Application::app()->db->conn;
                 $sql = " UPDATE customer SET "
                     . " name=?, password=?, id_license=?, license_expiration=? "

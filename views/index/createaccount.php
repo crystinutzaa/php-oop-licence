@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 use app\components\commons\CsrfSecurity;
 
-$this->renderView('views/layout/header', []); 
+$this->renderView('views/layout/header', []);
 ?>
 <?php
 $login = $params['login'];
@@ -28,8 +28,7 @@ if ($login->hasErrors()) {
                 ?>
                 <li> <?php echo $error->message ?></li>
                 <?php
-            }
-            ?>
+            } ?>
         </ul>
     </div>
     <?php

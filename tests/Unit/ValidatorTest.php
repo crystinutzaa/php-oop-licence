@@ -4,7 +4,6 @@ use app\components\commons\Validator;
 
 class ValidatorTest extends TestCase
 {
-
     public function testIsRequired()
     {
         $text = "";
@@ -22,7 +21,7 @@ class ValidatorTest extends TestCase
         $email = "";
         $this->assertFalse(Validator::isEmail($email));
 
-        $email = NULL;
+        $email = null;
         $this->assertFalse(Validator::isEmail($email));
 
         $email = "abc";
@@ -32,8 +31,7 @@ class ValidatorTest extends TestCase
         $this->assertFalse(Validator::isEmail($email));
 
         $email = "email@abc";
-        $this->assertFalse(Validator::isEmail($email));        
-
+        $this->assertFalse(Validator::isEmail($email));
     }
 
     public function testIsUrl()
@@ -41,7 +39,7 @@ class ValidatorTest extends TestCase
         $url = "";
         $this->assertFalse(Validator::isUrl($url));
 
-        $url = NULL;
+        $url = null;
         $this->assertFalse(Validator::isUrl($url));
 
         $url = "abc";

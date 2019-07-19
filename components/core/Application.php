@@ -8,7 +8,6 @@ namespace app\components\core;
  */
 abstract class Application
 {
-
     protected $_config;
     protected static $_app;
 
@@ -18,7 +17,6 @@ abstract class Application
      */
     private function __construct($config = [])
     {
-
         $this->_config = $config;
         Application::$_app = $this;
     }
@@ -28,7 +26,6 @@ abstract class Application
      */
     private function __clone()
     {
-        
     }
 
     /**
@@ -36,21 +33,19 @@ abstract class Application
      */
     private function __wakeup()
     {
-        
     }
 
     /**
-     * Returns the current application 
+     * Returns the current application
      * @return self
      */
     public static function app()
     {
-
         return self::$_app;
     }
 
     /**
-     * 
+     *
      * @param type $name
      * @return type
      */
@@ -67,7 +62,6 @@ abstract class Application
      */
     public static function getInstance($config = [])
     {
-
         static $instance = null;
 
         if (null === $instance) {
