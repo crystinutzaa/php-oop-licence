@@ -46,6 +46,9 @@ class IndexController extends BaseController
     {
         $login = new Auth();
 
+        /*
+        * Adding simple comment
+        */
         if (isset($_POST['login']) && $_POST['login'] && CsrfSecurity::checkCsrfToken($_POST['csrf_token'])) {
             $login->loadData($_POST['login']);
             if ($login->validateLogin() && $login->login()) {
